@@ -94,11 +94,11 @@ export default function DreamPage() {
   }
 
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-      <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
+    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen" style={{backgroundColor:"#301934",borderRadius:"20px"}}>
+      
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8" style={{backgroundColor:"#301934",borderRadius:"20px"}}>
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+          Generate theme for <span className="text-blue-600"> Event</span> 
         </h1>
         <ResizablePanel>
           <AnimatePresence mode="wait">
@@ -107,14 +107,14 @@ export default function DreamPage() {
                 <>
                   <div className="space-y-4 w-full max-w-sm">
                     <div className="flex mt-3 items-center space-x-3">
-                      <Image
+                      {/* <Image
                         src="/number-1-white.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
-                      />
+                      /> */}
                       <p className="text-left font-medium">
-                        Choose your room theme.
+                        Choose your event theme.
                       </p>
                     </div>
                     <DropDown
@@ -125,7 +125,8 @@ export default function DreamPage() {
                       themes={themes}
                     />
                   </div>
-                  <div className="space-y-4 w-full max-w-sm">
+                  {/* Second column disabled */}
+                  {/* <div className="space-y-4 w-full max-w-sm">
                     <div className="flex mt-10 items-center space-x-3">
                       <Image
                         src="/number-2-white.svg"
@@ -142,17 +143,12 @@ export default function DreamPage() {
                       setTheme={(newRoom) => setRoom(newRoom as typeof room)}
                       themes={rooms}
                     />
-                  </div>
+                  </div> */}
                   <div className="mt-4 w-full max-w-sm">
                     <div className="flex mt-6 w-96 items-center space-x-3">
-                      <Image
-                        src="/number-3-white.svg"
-                        width={30}
-                        height={30}
-                        alt="1 icon"
-                      />
+                    
                       <p className="text-left font-medium">
-                        Upload a picture of your room.
+                        Upload a picture of your venue hall.
                       </p>
                     </div>
                   </div>
@@ -268,7 +264,7 @@ export default function DreamPage() {
           </AnimatePresence>
         </ResizablePanel>
       </main>
-      <Footer />
+ 
     </div>
   );
 }
